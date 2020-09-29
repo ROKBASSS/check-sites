@@ -44,7 +44,11 @@ def main(argv):
     # if platforma == "Linux":
     # main_loop()
     # elif platforma == "Windows":
-    main_loop()
+    try:
+        main_loop()
+    except requests.ConnectionError as err:
+        print(err)
+    
 
 if __name__ == '__main__':
     main(sys.argv)
