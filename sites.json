@@ -1,1 +1,1 @@
-[{"name": "site1", "ip": "http://site1.ru", "status": true}, {"name": "site2", "ip": "http://site2.ru", "status": true}, {"name": "site3", "ip": "http://site3.ru", "status": false}]
+[{"name": "site1", "ip": "http://site1.ru", "status": false}, {"name": "site2", "ip": "http://site2.ru", "status": true}, {"name": "site3", "ip": "http://site3.ru", "status": false}]
