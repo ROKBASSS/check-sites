@@ -21,16 +21,18 @@ def main_loop():
     while True:
         try:
             for i in sites:
-                ok = request_site(i['ip'])
-                i['status'] = ok
-                # print(ok)
+                try:
+                    ok = request_site(i['ip'])
+                    i['status'] = ok
+                except ConnectionRefusedError:
+                    i['status'] = False
             with open("sites.json", "w") as c_data:
                 json.dump(sites, c_data)
             time.sleep(60)
         except KeyboardInterrupt:
             # print("You stopped me! Fool!")
             sys.exit(0)
-
+    
 def load_data():
     with open("sites.json") as c_data:
         data = c_data.read()
