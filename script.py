@@ -38,13 +38,11 @@ def load_data():
         return sites
 
 def main(argv):
-    platforma = platform.system()
-    if platforma == "Linux":
-        import daemon
-        with daemon.DaemonContext():
-            main_loop()
-    elif platforma == "Windows":
-        main_loop()
+    # platforma = platform.system()
+    # if platforma == "Linux":
+    # main_loop()
+    # elif platforma == "Windows":
+    main_loop()
 
 if __name__ == '__main__':
     main(sys.argv)
