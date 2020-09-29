@@ -30,6 +30,8 @@ def main_loop():
         except KeyboardInterrupt:
             # print("You stopped me! Fool!")
             sys.exit(0)
+        except:
+            pass
 
 def load_data():
     with open("sites.json") as c_data:
