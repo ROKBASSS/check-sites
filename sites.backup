@@ -1,0 +1,17 @@
+[
+    {
+        "name": "site1",
+        "ip": "http://site1.ru",
+        "status": false
+    },
+    {
+        "name": "site2",
+        "ip": "http://site2.ru",
+        "status": false
+    },
+    {
+        "name": "site3",
+        "ip": "http://site3.ru",
+        "status": false
+    }
+]
