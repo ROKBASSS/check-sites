@@ -24,7 +24,8 @@ def main_loop():
                 try:
                     ok = request_site(i['ip'])
                     i['status'] = ok
-                except ConnectionRefusedError:
+                except requests.ConnectionError as err:
+                    print(err)
                     i['status'] = False
             with open("sites.json", "w") as c_data:
                 json.dump(sites, c_data)
@@ -44,10 +45,8 @@ def main(argv):
     # if platforma == "Linux":
     # main_loop()
     # elif platforma == "Windows":
-    try:
-        main_loop()
-    except requests.ConnectionError as err:
-        print(err)
+    main_loop()
+    
     
 
 if __name__ == '__main__':
